@@ -38,11 +38,14 @@ context('when is not admin', function () {
 
 ```php
 use function Cfx\PSpec\context;
+use function Cfx\PSpec\get;
 use function Cfx\PSpec\getSubject;
 use function Cfx\PSpec\let;
 
+subject(fn () => get('variable'));
+
 context('when using high order testing', function () {
-  let('param2', fn () => 2);
+  let('variable', fn () => 2);
 
   it('can use high order testing')
     ->expect(getSubject(...))
