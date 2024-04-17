@@ -4,12 +4,18 @@
 
 > PSpec is a Pest plugin for composing multi scenarios tests with a simple API, based on RSpec let.
 
+## Important
+
+This plugin requires pest >= 3.5.0
+
 ### Install
+
 ```shell
 composer require cfx/pspec --dev
 ```
 
 ### Simple usage
+
 ```php
 use function Cfx\PSpec\context;
 use function Cfx\PSpec\expectSubject;
@@ -25,7 +31,7 @@ context('when is admin', function () {
   it('returns true', function () {
     expectSubject()->is_admin->toBeTrue();
   });
-}); 
+});
 
 context('when is not admin', function () {
   let('is_admin', fn() => false);
@@ -56,5 +62,3 @@ context('when using high order testing', function () {
 ```
 
 [more examples](https://github.com/coderfoxbrasil/cfx-pspec/blob/master/tests/Example.php)
-
-
