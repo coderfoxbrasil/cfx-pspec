@@ -4,16 +4,12 @@ declare(strict_types=1);
 
 namespace Cfx\PSpec;
 
-use Cfx\PSpec\Concern\HasLetVariables;
 use Closure;
 use Pest\Expectation;
 use Pest\PendingCalls\BeforeEachCall;
 use Pest\PendingCalls\DescribeCall;
-use Pest\Plugin;
 use Pest\Support\Backtrace;
 use Pest\TestSuite;
-
-Plugin::uses(HasLetVariables::class);
 
 function subject(Closure $subject): void
 {
