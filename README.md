@@ -1,5 +1,7 @@
 # PSpec
 
+[![Latest Stable Version](http://poser.pugx.org/cfx/pspec/v)](https://packagist.org/packages/cfx/pspec) [![Total Downloads](http://poser.pugx.org/cfx/pspec/downloads)](https://packagist.org/packages/cfx/pspec) [![Latest Unstable Version](http://poser.pugx.org/cfx/pspec/v/unstable)](https://packagist.org/packages/cfx/pspec) [![License](http://poser.pugx.org/cfx/pspec/license)](https://packagist.org/packages/cfx/pspec) [![PHP Version Require](http://poser.pugx.org/cfx/pspec/require/php)](https://packagist.org/packages/cfx/pspec)
+
 > PSpec is a Pest plugin for composing multi scenarios tests with a simple API, based on RSpec let.
 
 ### Install

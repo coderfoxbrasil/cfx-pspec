@@ -1,6 +1,6 @@
 {
     "name": "cfx/pspec",
-    "description": "Let lazy evaluation helpers you in your Pest tests",
+    "description": "PSpec is a Pest plugin for composing multi scenarios tests with a simple API, based on RSpec let",
     "keywords": [
         "php",
         "framework",
