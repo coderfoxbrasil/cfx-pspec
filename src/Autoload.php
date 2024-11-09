@@ -11,9 +11,15 @@ use Pest\PendingCalls\DescribeCall;
 use Pest\Support\Backtrace;
 use Pest\TestSuite;
 
-function subject(Closure $subject): void
+function subject(Closure $subject): BeforeEachCall
 {
-    new SubjectTester($subject);
+    $filename = Backtrace::testFile();
+
+    return new BeforeEachCall(
+        TestSuite::getInstance(),
+        $filename,
+        fn () => new SubjectTester($subject),
+    );
 }
 
 function let(string $key, Closure $resolver): BeforeEachCall
@@ -34,7 +40,9 @@ function get(string $key): mixed
 
 function context(string $description, Closure $tests): DescribeCall
 {
-    return SubjectTester::getInstance()->context($description, $tests);
+    return describe($description, function () use ($tests) {
+        return $tests();
+    });
 }
 
 function getSubject(): mixed
